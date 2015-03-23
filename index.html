@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<title>Breakout</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="img/icon.png" />
+	    <link rel="apple-touch-icon" href="img/icon.png" />
+	    <link rel="shortcut icon" href="img/weeicon.png" type="image/x-icon" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header id="header">
+			<p class="toolbar">
+			<button id="menuButton"></button>
+			<span id="span">Breakout</span>
+			</p>
+		</header>
+
+		<article id="wrapper">
+
+			<!-- Home Screen -->
+			<div id="home" class="visibleDisplay">
+				<div id="homeDisplay">
+					<p id="newGame" class="menu">New Game</p>
+					<p id="control" class="menu">Controls</p>
+					<p id="quit" class="menu">Quit</p>
+				</div>
+			</div>
+
+			<!-- Game area -->
+			<div id="game" class="hiddenDisplay">
+				<canvas id="gameCanvas"></canvas>
+			</div>
+
+			<!-- Lose -->
+			<div id="gameover" class="hiddenDisplay">
+				<p class="menu">You lose! Good say sir!</p>
+			</div>
+
+			<!-- Win -->
+			<div id="gamewin" class="hiddenDisplay">
+					<p class="menu">A winner is you!</p>
+			</div>
+
+			<!-- Controls -->
+			<div id="controls" class="hiddenDisplay">
+				<p class="menu">Controls</p>
+				<p class="controls">3 lives, clear the blocks.</p>
+				<p class="controls">Tap to pause</p>
+				<p class="controls">Tilt to move paddle</p>
+			</div>
+
+			<!-- Quit -->
+			<div id="quitScreen" class="hiddenDisplay">
+				<p class="menu">Farewell!</p>
+				<p class="controls">Since JS doesn't let you close a window, this'll do</p>
+			</div>
+
+		</article>
+
+		<script src="js/model.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/controller.js"></script>
+
+	</body>
+</html>
